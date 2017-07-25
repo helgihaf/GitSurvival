@@ -55,3 +55,9 @@ Then do the merge:
 ### Delete branch
 
     git branch -d myBranch
+
+### Update fork to current state
+
+    git clone https://github.com/helgihaf/myfork.git 
+    git remote add upstream git://github.com/sourceuser/sourceoffork.git 
+    git fetch upstream git rebase upstream/master
