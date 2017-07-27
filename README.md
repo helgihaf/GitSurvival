@@ -61,3 +61,10 @@ Then do the merge:
     git clone https://github.com/arthur.dent/myfork.git 
     git remote add upstream git://github.com/sourceuser/sourceoffork.git 
     git fetch upstream git rebase upstream/master
+
+### Save work for later without committing
+    git stash
+
+### Oh no! I changed to much, this should really be a new branch!
+    git stash
+    git stash branch myNewBranch
