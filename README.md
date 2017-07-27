@@ -3,12 +3,12 @@ Git Survival Guide
 Most git commands should be executed at the base directory of a repo, I.e. where the .git folder is.
 
 ### Git global setup
-    git config --global user.name "Helgi Hafþórsson"
-    git config --global user.email "helgihaf@gmail.com"
+    git config --global user.name "Arhtur Dent"
+    git config --global user.email "arhur.dent@thgttg.somesillydomain.com"
 
 ### Create a new repository
-    git clone git@gitlab.com:helgihaf/Prufa.git
-    cd Prufa
+    git clone git@gitlab.com:arthur.dent/TestRepo.git
+    cd TestRepo
     touch README.md
     git add README.md
     git commit -m "add README"
@@ -17,14 +17,14 @@ Most git commands should be executed at the base directory of a repo, I.e. where
 ### Existing folder
     cd existing_folder
     git init
-    git remote add origin git@gitlab.com:helgihaf/Prufa.git
+    git remote add origin git@gitlab.com:arthur.dent/TestRepo.git
     git add .
     git commit -m "Initial commit"
     git push -u origin master
 
 ### Existing Git repository
     cd existing_repo
-    git remote add origin git@gitlab.com:helgihaf/Prufa.git
+    git remote add origin git@gitlab.com:arthur.dent/TestRepo.git
     git push -u origin --all
     git push -u origin --tags
 
@@ -58,6 +58,6 @@ Then do the merge:
 
 ### Update fork to current state
 
-    git clone https://github.com/helgihaf/myfork.git 
+    git clone https://github.com/arthur.dent/myfork.git 
     git remote add upstream git://github.com/sourceuser/sourceoffork.git 
     git fetch upstream git rebase upstream/master
