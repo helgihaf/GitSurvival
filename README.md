@@ -28,7 +28,7 @@ Most git commands should be executed at the base directory of a repo, I.e. where
     git push -u origin --all
     git push -u origin --tags
 
-### Check inn all pending changes
+### Check in all pending changes
     git add .
     git commit -m "some clever comment"
 
@@ -40,6 +40,9 @@ Most git commands should be executed at the base directory of a repo, I.e. where
 
 ### "Undo checkout" on a single file
     git checkout -- filename
+
+### List local and remote branches
+    git branch -a
 
 ### Create a branch and switch to it
 
