@@ -6,7 +6,7 @@ Most git commands should be executed at the base directory of a repo, I.e. where
     git config --global user.name "Arhtur Dent"
     git config --global user.email "arhur.dent@thgttg.somesillydomain.com"
 
-### Create a new repository
+### Create a new empty repository
     git clone https://gitlab.com/arthur.dent/TestRepo.git
     cd TestRepo
     touch README.md
@@ -14,7 +14,7 @@ Most git commands should be executed at the base directory of a repo, I.e. where
     git commit -m "add README"
     git push -u origin master
 
-### Existing folder
+### Create repository from existing folder
     cd existing_folder
     git init
     git remote add origin https://gitlab.com/arthur.dent/TestRepo.git
@@ -22,7 +22,7 @@ Most git commands should be executed at the base directory of a repo, I.e. where
     git commit -m "Initial commit"
     git push -u origin master
 
-### Existing Git repository
+### Push new local folder to existing empty repository
     cd existing_repo
     git remote add origin https://gitlab.com/arthur.dent/TestRepo.git
     git push -u origin --all
