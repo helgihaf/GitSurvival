@@ -84,17 +84,15 @@ Then do the merge:
 
 ### Resolve Merge Conflicts
     git checkout --theirs myFile
-    - or -
-    git checkout --ours myfile
-    - or -
+- or -
+    git checkout --ours myFile
+- or -
     edit file in editor 
     
-    - then -
+- then -
     git add myFile
-    - or -
+- or -
     git rm myFile
     
 ### Abort Merge
     git merge --abort
-    
-    
