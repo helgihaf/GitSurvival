@@ -81,3 +81,20 @@ Then do the merge:
 ### Oh no! I changed to much, this should really be a new branch!
     git stash
     git stash branch myNewBranch
+
+### Resolve Merge Conflicts
+    git checkout --theirs myFile
+    - or -
+    git checkout --ours myfile
+    - or -
+    edit file in editor 
+    
+    - then -
+    git add myFile
+    - or -
+    git rm myFile
+    
+### Abort Merge
+    git merge --abort
+    
+    
