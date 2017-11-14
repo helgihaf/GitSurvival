@@ -52,6 +52,16 @@ git push origin master
 git pull origin
 ```
 
+### Check in all pending changes
+    git add .
+    git commit -m "some clever comment"
+
+### Push local changes to remote
+    git push origin master
+
+### Pull remote changes to local
+    git pull origin
+
 ### "Undo checkout" on a single file
 ```bash
 git checkout -- filename
