@@ -2,6 +2,7 @@ Git Survival Guide
 ==============
 Most git commands should be executed at the base directory of a repo, I.e. where the .git folder is.
 
+# New Repositories
 ### Git global setup
 ```bash
 git config --global user.name "Arhtur Dent"
@@ -35,7 +36,7 @@ git remote add origin https://gitlab.com/arthur.dent/TestRepo.git
 git push -u origin --all
 git push -u origin --tags
 ```
-
+# Checking In
 ### Check in all pending changes
 ```bash
 git add .
@@ -67,6 +68,7 @@ git pull origin
 git checkout -- filename
 ```
 
+# Branches
 ### List local and remote branches
 ```bash
 git branch -a
@@ -170,3 +172,25 @@ git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"
 ```
 Both of those methods squash the last three commits into a single new commit in the same way. The soft reset just re-points HEAD to the last commit that you do not want to squash. Neither the index nor the working tree are touched by the soft reset, leaving the index in the desired state for your new commit (i.e. it already has all the changes from the commits that you are about to “throw away”).
 Credit [StackOverflow](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git) 
+
+# Tagging
+### List Tags
+```bash
+git tag
+```
+
+### Create Tag
+```bash
+git tag -a v1.4 -m "my version 1.4"     # Annotated tag
+git tag v1.4-lw                         # Lightweight tag
+```
+
+### Checkout Tag
+```bash
+git checkout v1.4       # For viewing
+git checkout -b v1.4.1  # ...branch v1.4 tagged source into new branch v1.4.1
+```
+Or, all in one command:
+```bash
+git checkout -b v1.4.1 v1.4     # check out source with tag v1.4 and create new branch v1.4.1
+```
