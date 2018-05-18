@@ -45,7 +45,7 @@ git commit -m "some clever comment"
 
 ### Push local changes to remote
 ```bash
-git push origin master
+git push -u origin master
 ```
 
 ### Pull remote changes to local
