@@ -68,6 +68,11 @@ git pull origin
 git checkout -- filename
 ```
 
+### Undo all local uncommitted changes
+```bash
+git checkout .
+```
+
 # Branches
 ### List local and remote branches
 ```bash
