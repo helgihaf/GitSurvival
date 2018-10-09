@@ -57,9 +57,6 @@ git pull origin
     git add .
     git commit -m "some clever comment"
 
-### Push local changes to remote
-    git push origin master
-
 ### Pull remote changes to local
     git pull origin
 
