@@ -196,3 +196,13 @@ Or, all in one command:
 ```bash
 git checkout -b v1.4.1 v1.4     # check out source with tag v1.4 and create new branch v1.4.1
 ```
+
+# History
+### Show history of a file
+```bash
+git log -- <filename>
+```
+### Get old version of a file
+```bash
+git cat-file -p <sha1>:./file.tex > wherever.tex
+```
