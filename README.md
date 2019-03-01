@@ -70,6 +70,12 @@ git checkout -- filename
 git checkout .
 ```
 
+### Undo last commit
+...and move back into staging.
+```bash
+git reset --soft HEAD^
+```
+
 # Branches
 ### List local and remote branches
 ```bash
