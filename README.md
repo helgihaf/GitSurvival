@@ -57,9 +57,6 @@ git pull origin
     git add .
     git commit -m "some clever comment"
 
-### Pull remote changes to local
-    git pull origin
-
 ### "Undo checkout" on a single file
 ```bash
 git checkout -- filename
