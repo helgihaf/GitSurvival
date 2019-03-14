@@ -109,6 +109,16 @@ git merge myBranch
 git branch -d myBranch
 ```
 
+### Rename branch
+While in other branch:
+```bash
+git branch -m oldname newname
+```
+Rename the current branch:
+```bash
+git branch -m newname
+```
+
 ### Update fork to current state
 ```bash
 git clone https://github.com/arthur.dent/myfork.git 
