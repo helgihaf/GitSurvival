@@ -188,6 +188,17 @@ git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"
 Both of those methods squash the last three commits into a single new commit in the same way. The soft reset just re-points HEAD to the last commit that you do not want to squash. Neither the index nor the working tree are touched by the soft reset, leaving the index in the desired state for your new commit (i.e. it already has all the changes from the commits that you are about to “throw away”).
 Credit [StackOverflow](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git) 
 
+### Prune remote branches
+This command deletes remote tracking branches that don't exist anymore on the remote.
+To see which branches would be deleted:
+```bash
+git remote prune --dry-run origin
+```
+To actually prune the branches:
+```bash
+git remote prune origin
+```
+
 # Tagging
 ### List Tags
 ```bash
