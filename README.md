@@ -140,7 +140,8 @@ git branch -m newname
 ```bash
 git clone https://github.com/arthur.dent/myfork.git 
 git remote add upstream git://github.com/sourceuser/sourceoffork.git 
-git fetch upstream git rebase upstream/master
+git fetch upstream 
+git rebase upstream/master 
 ```
 
 ### Save work for later without committing
