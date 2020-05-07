@@ -93,6 +93,12 @@ Make sure you don’t have any uncommited changes, and then do:
 git checkout myBranch
 ```
 
+### List remotes
+```bash
+git remote -v
+```
+
+
 ### Rebase
 Preferred over merging. This will make changes to your target branch only.
 
@@ -104,11 +110,26 @@ git pull origin
 Then make sure that your target branch is ready for rebasing:
 ```bash
 git checkout targetBranch
+```
+
+Now there are two options  
+_Option 1:_  
+```bash
 <add/commit all changes>
 ```
+_Option 2:_  
+```bash
+git stash
+```
+
 Then, on the target branch, perform the rebase:
 ```bash
 git rebase master
+```
+
+If you opted for _Option2_
+```bash
+git stash pop
 ```
 ### Merge branches
 Switch to the target branch:
