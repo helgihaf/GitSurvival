@@ -73,6 +73,13 @@ git checkout .
 git reset --soft HEAD^
 ```
 
+### Undo all changes since last commit
+...and delete new files
+```bash
+git reset HEAD --hard
+git clean -fd
+```
+
 # Branches
 ### List local and remote branches
 ```bash
