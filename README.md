@@ -107,7 +107,7 @@ git remote -v
 
 
 ### Rebase
-Preferred over merging. This will make changes to your target branch only.
+Most useful for local branches that should be made up-to-date with their parent (master) branch. This will make changes to your target branch only.
 
 First make sure that your master is up to date:
 ```bash
@@ -139,7 +139,7 @@ If you opted for _Option2_
 git stash pop
 ```
 ### Merge branches
-Switch to the target branch:
+Most useful for merging your working branch into the parent (master) branch. Switch to the target branch:
 ```bash
 git checkout master
 ```
