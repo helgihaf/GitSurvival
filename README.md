@@ -138,6 +138,24 @@ If you opted for _Option2_
 ```bash
 git stash pop
 ```
+### Rebase: Syncing the idle feature
+Scenario:
+1. You create branch f1 from main and make some commits to it.
+2. You make a pull request from f1 to main and wait for reviewers.
+3. While waiting you create branch f2 _from branch f1_ and start developing the next feature.
+4. Reviews arrive for the f1 pull request, you fix, commit and push. This goes on for a few rounds.
+5. You continue to develop on f2 in the "idle" time between reviews and fixes.
+6. The f1 pull request is accepted and you merge to main, optionaly squashing before merge.
+7. To bring f2 up to date with main with surprising ease you do:
+```bash
+git checkout main
+git pull
+git checkout f2
+git rebase --onto main <commit hash>
+```
+Where \<commit hash\> is the last hash that is common both to f1 and f2.
+Now f2 is up to date with main (squash and all) and should only contain the commits you made to f2. You can now continue to develop on it, push, and create a pull request to main.
+
 ### Merge branches
 Most useful for merging your working branch into the parent (master) branch. Switch to the target branch:
 ```bash
