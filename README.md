@@ -156,6 +156,13 @@ git rebase --onto main <commit hash>
 Where \<commit hash\> is the last hash that is common both to f1 and f2.
 Now f2 is up to date with main (squash and all) and should only contain the commits you made to f2. You can now continue to develop on it, push, and create a pull request to main.
 
+### Force push
+This is commonly needed when you have pushed a branch to remote and then rebase it locally:
+```
+git push origin feature/add-aliens --force
+```
+**Warning**: Please don't do this if other people are working on the same branch. Others that have pulled this branch to their local machines will need to do some work to continue to use it, see https://stackoverflow.com/questions/9813816/git-pull-after-forced-update.
+
 ### Merge branches
 Most useful for merging your working branch into the parent (master) branch. Switch to the target branch:
 ```bash
